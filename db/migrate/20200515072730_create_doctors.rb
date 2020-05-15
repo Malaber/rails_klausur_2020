@@ -3,7 +3,6 @@ class CreateDoctors < ActiveRecord::Migration[6.0]
     create_table :doctors do |t|
       t.string :name
       t.belongs_to :laboratory
-      t.belongs_to :patient
 
       t.timestamps
     end
