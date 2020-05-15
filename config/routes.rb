@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   #
   root 'patients#index'
 
-  get '/doctors/see/:id', to: 'doctor#see', as: 'see_doctor'
-  get '/laboratories/sample/:id', to: 'laboratory#sample', as: 'sample_laboratory'
-  get '/patient/test/:id', to: 'patient#test', as: 'test_patient'
-  get '/covid', to: 'infection#covid', as: 'infection'
+  # get '/doctors/see/:id', to: 'doctor#see', as: 'see_doctor'
+  # get '/laboratories/sample/:id', to: 'laboratory#sample', as: 'sample_laboratory'
+  # get '/patient/test/:id', to: 'patient#test', as: 'test_patient'
+  # get '/covid/:id', to: 'infection#covid', as: 'infection'
 end
