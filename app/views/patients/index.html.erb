@@ -18,6 +18,9 @@
         <td><%= patient.name %></td>
         <td><%= patient.email %></td>
         <td><%= patient.mobile %></td>
+        <td>
+          <a>Gehe zum Arzt</a>
+        </td>
         <td><%= link_to 'Show', patient %></td>
         <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
         <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
