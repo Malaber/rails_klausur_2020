@@ -17,6 +17,10 @@ class LaboratoriesController < ApplicationController
     @laboratory = Laboratory.new
   end
 
+  def sample
+    render :sample
+  end
+
   # GET /laboratories/1/edit
   def edit
   end

@@ -12,6 +12,10 @@ class DoctorsController < ApplicationController
   def show
   end
 
+  def see
+    render :see_doc
+  end
+
   # GET /doctors/new
   def new
     @doctor = Doctor.new

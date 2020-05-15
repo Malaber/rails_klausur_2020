@@ -17,6 +17,10 @@ class PatientsController < ApplicationController
     @patient = Patient.new
   end
 
+  def test
+    redirect_to infection_url
+  end
+
   # GET /patients/1/edit
   def edit
   end
