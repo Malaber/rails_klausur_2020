@@ -10,6 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_05_15_072730) do
 
+  create_table "doctors", force: :cascade do |t|
+    t.string "name"
+    t.integer "laboratory_id"
+    t.integer "patient_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["laboratory_id"], name: "index_doctors_on_laboratory_id"
+    t.index ["patient_id"], name: "index_doctors_on_patient_id"
+  end
+
+  create_table "infections", force: :cascade do |t|
+    t.string "name"
+    t.integer "patient_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["patient_id"], name: "index_infections_on_patient_id"
+  end
+
+  create_table "laboratories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "mobile"
+    t.integer "doctor_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["doctor_id"], name: "index_patients_on_doctor_id"
+  end
+
+  add_foreign_key "infections", "patients"
 end
